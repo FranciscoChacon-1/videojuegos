@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GameVerse | Catálogo</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">GameVerse</a>
+      <button class="nav-toggle" aria-label="Abrir menú" id="btnMenu">☰</button>
+      <nav class="nav-menu" id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html" class="active">Catálogo</a>
+        <a href="contacto.html">Contacto</a>
+        <button id="btnTheme" class="btn theme-btn" title="Cambiar tema">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">Catálogo de juegos</h1>
+
+    <!-- Filtros -->
+    <div class="filters">
+      <input type="search" id="search" placeholder="Buscar por título…" />
+      <select id="platform">
+        <option value="">Plataforma (todas)</option>
+        <option value="pc">PC</option>
+        <option value="playstation">PlayStation</option>
+        <option value="xbox">Xbox</option>
+        <option value="switch">Nintendo Switch</option>
+      </select>
+      <select id="genre">
+        <option value="">Género (todos)</option>
+        <option value="accion">Acción</option>
+        <option value="rpg">RPG</option>
+        <option value="deporte">Deporte</option>
+        <option value="aventura">Aventura</option>
+      </select>
+    </div>
+
+    <!-- Grid de juegos -->
+    <div class="grid cards" id="gamesGrid">
+      <!-- CARD 1 -->
+      <article class="card game"
+               data-title="Aqua League"
+               data-platform="switch"
+               data-genre="deporte">
+        <!-- Pon tu imagen -->
+        <img src="img/img1.jpeg" alt="Aqua League" />
+        <div class="card-body">
+          <h3>Aqua League</h3>
+          <p class="muted">Nintendo Switch • Deporte</p>
+          <p>Liga de natación arcade con torneos semanales y progresión online.</p>
+          <button class="btn secondary add-cart" data-game="Aqua League">Añadir</button>
+        </div>
+      </article>
+
+      <!-- CARD 2 -->
+      <article class="card game"
+               data-title="Spike Masters"
+               data-platform="playstation"
+               data-genre="deporte">
+        <img src="img/img2.png" alt="Spike Masters" />
+        <div class="card-body">
+          <h3>Spike Masters</h3>
+          <p class="muted">PlayStation • Deporte</p>
+          <p>Simulador de voleibol competitivo con física realista y ligas online.</p>
+          <button class="btn secondary add-cart" data-game="Spike Masters">Añadir</button>
+        </div>
+      </article>
+
+      <!-- CARD 3 -->
+      <article class="card game"
+               data-title="Realm of Embers"
+               data-platform="pc"
+               data-genre="rpg">
+        <img src="img/img3.jpeg" alt="Realm of Embers" />
+        <div class="card-body">
+          <h3>Realm of Embers</h3>
+          <p class="muted">PC • RPG</p>
+          <p>RPG de mundo abierto con historia ramificada y combates tácticos.</p>
+          <button class="btn secondary add-cart" data-game="Realm of Embers">Añadir</button>
+        </div>
+      </article>
+
+      <!-- Agrega más cards duplicando el patrón y cambiando data-* -->
+    </div>
+
+    <!-- “Carrito” simple (solo visual) -->
+    <section class="cart">
+      <h2>Lista de deseados</h2>
+      <ul id="wishList" class="wish-list"></ul>
+      <button id="clearList" class="btn danger">Limpiar lista</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>GameVerse</h4>
+        <p class="muted">© <span id="year"></span></p>
+      </div>
+      <div>
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="#">Soporte</a></li>
+          <li><a href="#">Términos</a></li>
+          <li><a href="#">Privacidad</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Redes</h4>
+        <ul class="social">
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Twitch</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Integrantes</h4>
+        <ul class="social">
+          <li>Francisco Eduardo Chacón Estrada</li>
+          <li>Rodrigo Marcelo Monterrosa Sandoval</li>
+          <li>Paola Tatiana Galicia Santacruz</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/app.js"></script>
+</body>
+</html>
